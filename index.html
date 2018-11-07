@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <link href="styles/reset.css" rel="stylesheet" type="text/css" />
+  <link href="styles/styles.css" rel="stylesheet" type="text/css" />
+  <style>
+    @font-face {
+      font-family: Houstander;
+      src: url(fonts/Houstander.ttf);
+    }
+  </style>
+  <script>
+    window.onload = function() {
+      var date = new Date();
+
+      var month = new Array();
+        month[0] = "January";
+        month[1] = "February";
+        month[2] = "March";
+        month[3] = "April";
+        month[4] = "May";
+        month[5] = "June";
+        month[6] = "July";
+        month[7] = "August";
+        month[8] = "September";
+        month[9] = "October";
+        month[10] = "November";
+        month[11] = "December";
+        var n = month[date.getMonth()];
+
+      var currentYear = date.getFullYear();
+      document.getElementById("currentYear").innerText = currentYear;
+      document.getElementById("yearEvent").innerText = currentYear + " Events";
+      document.getElementById("currentMonth").innerText = n;
+    }
+  </script>
+  <title>Fatty's Bar</title>
+</head>
+
+<body>
+  <div id="fixWhiteBorder">
+    <div class="mainWrapper" id="top">
+      <a href="#eventsScroll" id="videoScroll">
+        <video loop autoplay muted>
+          <source src="videos/videofattys.mp4" type="video/mp4">
+        </video>
+      </a>
+    </div>
+  </div>
+  <nav class="navigation" id="nav">
+    <ul class="tabs">
+      <li id="events"><a href="#eventsScroll">Events</a></li>
+      <li id="specials"><a href="#specialsScroll">Specials</a></li>
+      <a href="#top"><img id="icon" src="images/fattysbar_icon.png" /></a>
+      <li id="bookings"><a href="#bookingsScroll">Bookings</a></li>
+      <li id="contact"><a href="#contactScroll">Contact</a></li>
+
+    </ul>
+  </nav>
+  <!-- Events -->
+  <section class="sections events" id="eventsScroll">
+    <article id="eventList">
+      <span class="eventText" id="yearEvent"></span>
+      <span class="eventText" id="currentMonth"></span>
+      <table>
+        <tr>
+          <td class="borderTbl">OCTOBER 25, 2018</td>
+          <td class="borderTbl">BOISE, FATTY'S BAR</td>
+          <td style="width: 50%;">EPTIC PRESENTS: ANTI-HUMAN NORTH AMERICAN TOUR</td>
+        </tr>
+      </table>
+    </article>
+  </section>
+  <!-- Specials -->
+  <section class="sections specials" id="specialsScroll">
+    <img id="fattysmenu" src="images/fattys_menu.jpg" alt="Fattys Menu">
+  </section>
+  <!-- Bookings -->
+  <section class="sections bookings" id="bookingsScroll">
+    <article id="bookingsFlexWrapper">
+      <h1 id="bookingsTextHeader">Book Our Bar</h1>
+      <p class="bookingsPara">WHETHER ITS FOR A BIRTHDAY, BACHELOR OR BACHELORETTE, A CORPORATE EVENT OR A FUNDRAISER OUR SPACE CAN BE
+      TAILORED FOR YOU.</p>
+      <p class="bookingsPara">RESERVE FATTY’S BAR FOR A PRIVATE PARTY. WE’VE GOT AN ATMOSPHERE TO MATCH WHATEVER MOOD YOU’RE TRYING
+      TO CREATE. GET IN TOUCH WITH US NOW TO RESERVE.</p>
+      <p class="bookingsPara">WHETHER IT’S AN INTIMATE EVENT OF 5, A GATHERING OF 50 OR A FULL-SCALE PARTY, FATTY’S BAR IS SET UP TO HANDLE
+      IT WITH PERFECTION. WHATEVER YOU ENTERTAINMENT REQUIREMENTS, FATTY’S IS COMMITTED TO DEVELOPING AND
+      EXECUTING YOUR EVENT WITH THE HIGHEST POSSIBLE STANDARDS.</p>
+      <button id="bookingsButton">Book Our Bar</button>
+    </article>
+  </section>
+  <!-- Contact -->
+  <section class="sections contact" id="contactScroll">
+
+  </section>
+  <footer>
+    <a href="http://preclarusdesign.com/" target="_blank"><img src="images/PDdesigntransparent.png" id="PD" /></a>
+    <p id="footerText">Copyright &copy; <span id="currentYear"></span> <a href="http://preclarusdesign.com/" id="footerLink" target="_blank">Preclarus Design</a> | All rights reserved
+    </p>
+  </footer>
+
+
+
+
+
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="scripts/scripts.js"></script>
+</body>
+
+</html>
